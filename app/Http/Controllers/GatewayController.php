@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Http;
 
 class GatewayController extends Controller
 {
-    private $userService = "http://localhost:8001";
-    private $rentalService = "http://localhost:8002";
+    public $userService = "https://site1-lw7p.onrender.com";
+    public $rentalService = "https://site2-xv5f.onrender.com";
 
     public function handleRequest(Request $request)
     {
