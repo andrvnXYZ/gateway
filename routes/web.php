@@ -9,6 +9,8 @@ $router->get('/', function () use ($router) {
 // KINI DAPAT NAA SA GAWAS SA MIDDLEWARE
 $router->post('login', 'AuthController@login');
 $router->post('register', 'GatewayController@handleRequest'); // I-add ni!
+// Sa Gateway routes/web.php
+$router->post('login', 'GatewayController@handleRequest');
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
     
